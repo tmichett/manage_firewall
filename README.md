@@ -13,9 +13,11 @@ Role Variables
 
 **fw_svc_name** - This variable is the name the service  or a list of services to be started or controlled on the system. This is the "ONLY" required variable to be supplied if **fw_port/fw_proto** are not defined.
 
-**fw_state** - This variable is a default variable and set to "enabled". Other allowed values are "disabled".
+**fw_state** - This variable is a default variable and set to "enabled". Other allowed values are "disabled". This variable will determine if the firewall is running.
 
-**fw_permanent** - This variable is a default variable and set to "true". Other allowed values are "false"
+**fw_immediate** - This variable is a default variable and set to "yes". Other allowed values are "no". This variable controls if the rules are applied to the running firewall.
+
+**fw_permanent** - This variable is a default variable and set to "true". Other allowed values are "false". This variable controls if the rules are saved to the firewall XML file in **/etc/firewalld**.
 
 **fw_port** - This variable is the numerical value of the firewall port. This is variable along with **fw_proto** are required variables and must be supplied if **fw_svc_name** is not defined.
 

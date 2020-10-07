@@ -1,4 +1,5 @@
 ---
 # defaults file for deploy_packages
-svc_state: running
-svc_enabled: enabled
+fw_state: enabled
+fw_permanent: true
+fw_immediate: yes

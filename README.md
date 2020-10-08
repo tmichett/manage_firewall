@@ -36,15 +36,19 @@ Including an example of how to use your role (for instance, with variables passe
 
 
     ---
-    - name: Install Software Packages
+    - name: Manage Firewall
       hosts: serverc
       vars:
-        pkg_name:
-          - vim
-          - tree
-          - httpd
+        fw:
+          - fw_port: 8080
+            fw_proto: tcp
+          - fw_port: 9090
+            fw_proto: tcp
+        fw_svc:
+          - fw_svc_name: http
+          - fw_svc_name: https
       roles:
-        - tmichett.deploy_packages
+        - tmichett.manage_firewall
 
 
 

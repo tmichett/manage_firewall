@@ -3,3 +3,4 @@
 fw_state: enabled
 fw_permanent: true
 fw_immediate: yes
+fw_proto: tcp

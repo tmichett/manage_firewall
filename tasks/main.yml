@@ -16,4 +16,4 @@
     state: "{{ fw_state }}"
     immediate: "{{ fw_immediate }}"
   loop: "{{ fw }}"
-  when: item.fw_port is defined
+  when: fw is defined
